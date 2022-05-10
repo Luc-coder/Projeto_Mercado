@@ -1,0 +1,199 @@
+@font-face {
+    font-family: 'icones';
+    src: url(font/icones.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    scroll-behavior: smooth;
+}
+.header{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: 2;
+    background: linear-gradient(#000, #2b2a2a);
+    color: #fff;
+    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 100vw;
+    height: 112px;
+    grid-template-areas: "menu-area tit-area ft-area";
+    
+}
+.button{
+    width: 32px;
+    height: 32px;
+    margin: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #ececec;
+    text-align: center;
+    transition: .25s;
+}
+.button:active{
+    border: 1px solid black;
+    box-shadow: 0 0 10px black;
+}
+.menu-lateral{
+    display: none;
+    transition: .25s;
+}
+.menu-lateral-ativo{
+    display: block;
+    width: 80vw;
+    height: 100vh;
+    padding: 10px;
+    padding-bottom: 0;
+    background: linear-gradient(#bb0707, #ec4444);
+    grid-column: span 3;
+    position: absolute;
+    top: 112px;
+    transition: .25s;
+    
+}
+.lista-menu{
+    padding-bottom:0px;
+    
+}
+.item-menu{
+    border-bottom: 1px solid #969191;
+    padding: 3px;
+}
+.item-menu a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.header-logo{
+    width: 40px;
+    margin: 7px;
+    
+}
+.pesquisa{
+    grid-column: span 2;
+    width:90%;
+    margin: 15px;
+    border-radius: 8px 0px 0px 8px ;
+    padding: 7px;
+    font-weight: bold;
+    font-size: 0.9em;
+    border: none;
+    outline: none;
+    margin-right: 0;
+}
+
+.pesquisar{
+    width: 60%;
+    height: 31px;
+    border: none;
+    margin: 15px;
+    margin-left: -7vw;
+    margin-top: 14px;
+    background-color: #969191;
+    border-radius: 0 8px 8px 0;
+}
+.pesquisar:active{
+    text-decoration: none;
+    border: 1px solid #000;
+}
+.titulo-header{
+    font-size: 1.2em;
+    margin: 10px;
+    font-style: italic;
+    text-align: center;
+}
+
+.tit-area{
+    grid-area: tit-area;
+    grid-row: 1;
+    
+}
+.ft-area{
+    grid-area: ft-area;
+    grid-row: 1;
+}
+.menu-area{
+    grid-area: menu-area;
+    grid-row: 1;
+    
+}
+.lista-menu{
+    grid-row: 2;
+    grid-column: span 2;
+}
+#item1,#item2,#item3,#item4,#item5,#item6,#item7,#item8,#item9,#item10{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+.tit-secao{
+    margin: 10px;
+    font-size: 22pt;
+    padding: 5px;
+    border-bottom: 1px solid #c9c9c9;
+    grid-column: span 2;
+}
+.prod-box{
+    width: 38vw;
+    height: 25vh;
+    padding: 15px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    margin: 2vw;
+}
+.prod-box:hover{
+    box-shadow: 0 0 14px rgb(61, 106, 190);
+}
+.img-produto{
+    margin-left: 0px;
+    width: 38vw;
+    height: 110px;
+}
+.produto{
+    color: #413e3e;
+    padding: 3px;
+    height: 70px;
+}
+.preco{
+    margin: 5px;
+    color: #fff;
+    background-color: rgb(53, 209, 39);
+    width: 100%;
+    padding: 4px;
+    margin-left: -6px;
+    border-radius: 5px;
+    
+}
+@media screen and (max-width: 380px) {
+    .prod-box{
+        width: 35vw;
+        height: 170px;
+        padding: 15px;
+        border: 1px solid #000;
+        border-radius: 10px;
+        margin: 5px;
+    }
+    .img-produto{
+        margin-left: 0px;
+        width: 110px;
+        height: 70px;
+    }
+    .produto{
+        color: #413e3e;
+        padding: 3px;
+        font-size: 11pt;
+        height: 65px;
+    }
+    .preco{
+        cursor: pointer;
+        margin: 5px;
+        color: #fff;
+        background-color: rgb(53, 209, 39);
+        width: 100%;
+        padding: 4px;
+        margin-left: -6px;
+        border-radius: 5px;
+    }
+}
